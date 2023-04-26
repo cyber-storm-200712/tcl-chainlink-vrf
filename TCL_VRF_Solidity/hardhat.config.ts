@@ -126,13 +126,13 @@ const config: HardhatUserConfig = {
   networks: {
     polygon: {
       url: "https://matic-mainnet-archive-rpc.bwarelabs.com",
-      accounts: ["ef55760cc4a892bb7ce868d6bc4c195206b83995f5be6ce5a85872585eded48d"],
+      accounts: [""],
       timeout: 600000
     },
     bscmainnet: {
       url: process.env.BSC_URL || "",
       accounts:
-        ['1aed5614bb8b80e164fe86b5c5f50b6a61440e9b4e3a39250629573069200819'],
+        [''],
       timeout: 600000
     },
     ropsten: {
@@ -154,17 +154,17 @@ const config: HardhatUserConfig = {
     snowtrace: {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
       chainId: 43113,      // Rinkeby's id
-      accounts: ['90b888ae264e10c0e6ae31de9c5790d0afa70b1fa989baeb21beab213acb80e7']
+      accounts: ['']
     },
     goerli: {
       url: 'https://goerli.infura.io/v3/60d0fc034847460da68aa4501df5fe57',
       chainId: 5,
-      accounts: ['0x07c450de52df478d9e77450857598020bcaf0e3db5919fe2037d1bb3c313c1a8']
+      accounts: ['']
     },
     mumbai: {
       url: 'https://rpc.ankr.com/polygon_mumbai',
       chainId: 80001,
-      accounts: ['0x07c450de52df478d9e77450857598020bcaf0e3db5919fe2037d1bb3c313c1a8']
+      accounts: ['']
     },
     localnode: {
       url: process.env.LOCALNET_URL || "http://127.0.0.1:8545",
@@ -183,10 +183,6 @@ const config: HardhatUserConfig = {
     }
   },
   etherscan: {
-    // apiKey: 'PM3U6R7RBSE8I23SDYPHHQTIUZG3DJNCY5', //BSC Scan
-    // apiKey: '1FTHWYZGTW9TKZA72FTFDBY13UUIRP3SMI' //Ether Scan,
-    // apiKey: 'U9J2VP8EWVU1MW1NAUP8M1DYBNF7B7D3K8' //snowtrace,
-    apiKey: 'J1HKBETU688PWJE367UZ6NREUYW45ASZ9D' // Mumbai
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS ? true : true,
